@@ -1,0 +1,97 @@
+/* For the description in the main list of widgets */
+#widgetList .preview {
+	margin-top: -10px;
+	padding: 0 15px 10px 15px;
+}
+/* scroller sample */
+
+#two_dogs {
+	width: 300px;
+	height: 200px;
+	position: relative;
+	-webkit-user-drag: none;
+}
+
+#dog_spacer {
+	height: 30px;
+}
+
+#scroll_mode_group {
+	margin: 20px;
+}
+
+.dog_title {
+	font-size: 18px;
+	text-align: center;
+}
+
+#modeSelector {
+}
+
+.scroll-big-number {
+	text-align: center;
+	font-size: 300%;
+}
+
+#going-native {
+	width: 300px;
+	height: 200px;
+	margin: 0px auto;
+	border: 1px solid #999;
+}
+
+.scroll-example-left {
+	background-color: red;
+	position: absolute;
+	height: 200px;
+	z-index: 999;
+	width: 8px;
+	left: 0px;
+}
+
+.scroll-example-right {
+	background-color: green;
+	position: absolute;
+	height: 200px;
+	z-index: 999;
+	width: 8px;
+	right: 0px;
+}
+
+.scroll-example-top {
+	background-color: blue;
+	position: absolute;
+	height: 8px;
+	z-index: 999;
+	width: 300px;
+	top: -0;
+}
+
+.scroll-example-bottom {
+	background-color: yellow;
+	position: absolute;
+	width: 300px;
+	z-index: 999;
+	height: 8px;
+	bottom: 0;
+}
+
+#scrollerContainer {
+	margin: 0px auto;
+	position: relative;
+	width: 300px;
+	height: 200px;
+	border: 1px solid #999;
+}
+
+.select-example-element {
+	border: 1px solid #999;
+	margin: 3px 3px;
+	padding: 20px;
+	text-align: center;
+}
+
+.select-example-element.selected {
+	background-color: red;
+	color: white;
+}

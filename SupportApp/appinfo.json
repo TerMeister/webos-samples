@@ -1,0 +1,9 @@
+{
+	"id": "com.palmdts.support",
+	"version": "0.0.9",
+	"vendor": "palm DTS",
+	"type": "web",
+	"main": "index.html",
+	"title": "Support App",
+	"icon": "icon.png"
+}
