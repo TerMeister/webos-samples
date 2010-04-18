@@ -1,0 +1,9 @@
+{
+	"id": "palmdts.tipsandtricks",
+	"version": "1.0.0",
+	"vendor": "Palm",
+	"type": "web",
+	"main": "index.html",
+	"title": "TipsAndTricks",
+	"icon": "icon.png"
+}
