@@ -3,6 +3,9 @@
         "source": "app/assistants/stage-assistant.js"
     },
     {
+        "source": "debug-logging/debug-logging.js"
+    },
+    {
         "scenes": "first",
         "source": "app/assistants/first-assistant.js"
     },
