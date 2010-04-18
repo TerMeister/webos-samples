@@ -61,7 +61,7 @@ var DebugLogging;
          * @param postLogItems Array of strings to be evaled and logged after execution
          *        of the wrapped method.
          */
-        wrapInLogger: function(name, logItems, postLogItems, ) {
+        wrapInLogger: function(name, logItems, postLogItems) {
             logItems = logItems || [];
             postLogItems = postLogItems || [];
 
