@@ -9,4 +9,11 @@
         "scenes": "first",
         "source": "app/assistants/first-assistant.js"
     },
+
+    {
+        "source": "operation-queue/operation-queue.js"
+    },
+    {
+        "source": "operation-queue/operation-queue-test.js"
+    },
 ]
