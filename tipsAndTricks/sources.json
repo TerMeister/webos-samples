@@ -6,9 +6,14 @@
         "source": "app/assistants/first-assistant.js"
     },
     {
-        "source": "operation-queue/operation-queue.js"
+        "scenes": "active",
+        "source": "app/assistants/active-assistant.js"
     },
-    {
-        "source": "operation-queue/operation-queue-test.js"
-    },
+
+    {"source": "operation-queue/operation-queue.js"},
+    {"source": "operation-queue/operation-queue-test.js"},
+
+    {"source": "observer-manager/observable.js"},
+    {"source": "observer-manager/observer-manager.js"},
+    {"source": "observer-manager/observer-manager-test.js"},
 ]

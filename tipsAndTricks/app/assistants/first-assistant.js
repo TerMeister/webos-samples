@@ -1,6 +1,7 @@
 function FirstAssistant() {
     this.tests = [
-        new OperationQueueTest()
+        new OperationQueueTest(),
+        new ObserverManagerTest(),
     ];
 }
 
