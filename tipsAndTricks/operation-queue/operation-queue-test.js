@@ -1,15 +1,15 @@
 function OperationQueueTest() {}
 
-OperationQueueTest.prototype.exec = function(assistant) {
+OperationQueueTest.prototype.exec = function(assistant,  cont) {
     Mojo.Log.info("Executing tests: operationqueuetest");
     this.successTest(assistant);
     this.postSuccessTest(assistant);
     this.failureTest(assistant);
     this.postFailureTest(assistant);
     Mojo.Log.info("Completed tests: operationqueuetest");
-};
 
-// TODO : Add tests that verify the blocker callbacks are handled
+    cont();
+};
 
 OperationQueueTest.prototype.successTest = function(assistant) {
     var queue = new OperationQueue(),

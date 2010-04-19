@@ -8,16 +8,22 @@ FirstAssistant.prototype.setup = function() {
     this.infoEl = this.controller.sceneElement.querySelector(".test-status");
     this.failureLog = this.controller.sceneElement.querySelector(".failures");
 
-    var len = this.tests.length;
-    for (var i = 0; i < len; i++) {
-        this.runTest(i);
-    }
+    setTimeout(this.testRunner(0), 0);
+};
+FirstAssistant.prototype.testsComplete = function() {
     this.infoEl.innerHTML = $L("Tests complete");
 };
 
-FirstAssistant.prototype.runTest = function(i) {
-    this.infoEl.innerHTML = $L("Running test #{num}").interpolate({ num: i });
-    this.tests[i].exec(this);
+FirstAssistant.prototype.testRunner = function(next) {
+    var self = this;
+    return function() {
+        if (self.tests[next]) {
+            self.infoEl.innerHTML = $L("Running test #{num}").interpolate({ num: next });
+            self.tests[next].exec(self, self.testRunner(next+1));
+        } else {
+            self.testsComplete();
+        }
+    };
 };
 
 FirstAssistant.prototype.failure = function(message) {
