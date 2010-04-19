@@ -1,15 +1,10 @@
 [
-    {
-        "source": "app/assistants/stage-assistant.js"
-    },
-    {
-        "source": "debug-logging/debug-logging.js"
-    },
+    {"source": "app/assistants/app-assistant.js"},
+    {"source": "debug-logging/debug-logging.js"},
     {
         "scenes": "first",
         "source": "app/assistants/first-assistant.js"
     },
-
     {
         "source": "operation-queue/operation-queue.js"
     },
