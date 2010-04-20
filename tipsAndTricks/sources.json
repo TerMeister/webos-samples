@@ -16,4 +16,7 @@
     {"source": "observer-manager/observable.js"},
     {"source": "observer-manager/observer-manager.js"},
     {"source": "observer-manager/observer-manager-test.js"},
+
+    {"source": "service-request-wrapper/service-request-wrapper.js" },
+    {"source": "service-request-wrapper/service-request-wrapper-test.js" },
 ]

@@ -2,6 +2,7 @@ function FirstAssistant() {
     this.tests = [
         new OperationQueueTest(),
         new ObserverManagerTest(),
+        new ServiceRequestWrapperTest(),
     ];
 }
 
@@ -39,4 +40,14 @@ FirstAssistant.prototype.failure = function(message) {
     } catch (err) {
         DebugLogging.logError(err, "|    stack: ");
     }
+};
+
+function execChain(assistant, cont, chain, next) {
+    return function() {
+        if (chain[next]) {
+            chain[next](assistant, execChain(assistant, cont, chain, next+1));
+        } else {
+            cont();
+        }
+    };
 };
