@@ -9,6 +9,12 @@
         "scenes": "active",
         "source": "app/assistants/active-assistant.js"
     },
+    {
+        "scenes": "custom-widget",
+        "source": "app/assistants/custom-widget-assistant.js"
+    },
+
+    {"source": "custom-widget/widget-submit-text.js"},
 
     {"source": "operation-queue/operation-queue.js"},
     {"source": "operation-queue/operation-queue-test.js"},

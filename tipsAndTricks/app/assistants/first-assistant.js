@@ -14,6 +14,9 @@ FirstAssistant.prototype.setup = function() {
 };
 FirstAssistant.prototype.testsComplete = function() {
     this.infoEl.innerHTML = $L("Tests complete");
+
+    // TODO : Do this through the app menu or some other UI option
+    this.controller.stageController.pushScene("custom-widget");
 };
 
 FirstAssistant.prototype.testRunner = function(next) {
