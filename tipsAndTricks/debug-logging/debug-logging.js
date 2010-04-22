@@ -120,5 +120,22 @@ var DebugLogging;
                 }
             });
         },
+
+        /**
+         * Generic error logger. Wraps the function implementation with the try catch cruft.
+         * 
+         * This is intended for use at design time whereas wrapInError handler is intended
+         * for use at runtime.
+         */
+        traceWrapper: function(handler) {
+            return function() {
+                try {
+                    return handler.apply(this, arguments);
+                } catch (err) {
+                    DebugLogging.logError(err, "traceWrapper: ");
+                    throw err;
+                }
+            };
+        }
     };
 })();
