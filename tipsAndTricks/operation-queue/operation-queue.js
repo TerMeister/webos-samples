@@ -26,6 +26,14 @@ OperationQueue.prototype = {
     },
 
     /**
+     * Resets the state of the operation queue such that the queue is back in
+     * a blocking state.
+     */
+    reset: function() {
+        this.complete = false;
+    },
+
+    /**
      * Generates the success handler for the blocking operation.
      */
     getSuccessHandler: function(callback) {

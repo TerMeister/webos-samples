@@ -6,6 +6,8 @@ OperationQueueTest.prototype.exec = function(assistant,  cont) {
     this.postSuccessTest(assistant);
     this.failureTest(assistant);
     this.postFailureTest(assistant);
+    this.resetSuccessTest(assistant);
+    this.resetFailureTest(assistant);
     Mojo.Log.info("Completed tests: operationqueuetest");
 
     cont();
@@ -105,6 +107,51 @@ OperationQueueTest.prototype.postSuccessTest = function(assistant) {
     }
 };
 
+OperationQueueTest.prototype.resetSuccessTest = function(assistant) {
+    var queue = new OperationQueue(),
+        responses = [],
+        success = queue.getSuccessHandler();
+
+    success("Success");
+    queue.reset();
+
+    this.overrideExec(queue);
+
+    queue.queue(function(result) {
+        if (result !== "Success") {
+            assistant.failure("Unexpected result: " + result);
+        }
+        responses.push(1);
+    });
+    queue.queue({
+        onsuccess: function(result) {
+            if (result !== "Success") {
+                assistant.failure("Unexpected result: " + result);
+            }
+            responses.push(2);
+        },
+        onfailure: function(result) {
+            assistant.failure("Failure handler called");
+        }
+    });
+    queue.queue({
+        onfailure: function(result) {
+            assistant.failure("Solo Failure handler called");
+        }
+    });
+
+    if (responses.length) {
+        assistant.failure("Handlers called prior to exec");
+    }
+
+    success("Success");
+
+    if (responses.length !== 2) {
+        assistant.failure("Unexpected callback count: " + responses.length);
+    }
+    this.verifyResults("succes responses", responses, assistant);
+};
+
 OperationQueueTest.prototype.failureTest = function(assistant) {
     var queue = new OperationQueue(),
         responses = [];
@@ -194,6 +241,52 @@ OperationQueueTest.prototype.postFailureTest = function(assistant) {
     if (responses.length !== 3 || responses[2] !== 2) {
         assistant.failure("Callback 3 improperly called");
     }
+};
+
+OperationQueueTest.prototype.resetFailureTest = function(assistant) {
+    var queue = new OperationQueue(),
+        responses = [],
+        failure = queue.getFailureHandler();
+
+    failure("Failure");
+    queue.reset();
+
+    this.overrideExec(queue);
+
+    queue.queue(function(result) {
+        assistant.failure("Function success callback called");
+    });
+    queue.queue({
+        onsuccess: function(result) {
+            assistant.failure("Successhandler called");
+        },
+        onfailure: function(result) {
+            if (result !== "Failure") {
+                assistant.failure("Unexpected result: " + result);
+            }
+            responses.push(1);
+        }
+    });
+    queue.queue({
+        onfailure: function(result) {
+            if (result !== "Failure") {
+                assistant.failure("Unexpected result: " + result);
+            }
+            responses.push(2);
+        }
+    });
+
+    if (responses.length) {
+        assistant.failure("Handlers called prior to exec");
+    }
+
+    var failure = queue.getFailureHandler();
+    failure("Failure");
+
+    if (responses.length !== 2) {
+        assistant.failure("Unexpected callback count: " + responses.length);
+    }
+    this.verifyResults("succes responses", responses, assistant);
 };
 
 OperationQueueTest.prototype.overrideExec = function(queue) {
