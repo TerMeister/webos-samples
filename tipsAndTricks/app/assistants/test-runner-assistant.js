@@ -1,4 +1,4 @@
-function FirstAssistant() {
+function TestRunnerAssistant() {
     this.tests = [
         new OperationQueueTest(),
         new ObserverManagerTest(),
@@ -7,20 +7,17 @@ function FirstAssistant() {
     ];
 }
 
-FirstAssistant.prototype.setup = function() {
+TestRunnerAssistant.prototype.setup = function() {
     this.infoEl = this.controller.sceneElement.querySelector(".test-status");
     this.failureLog = this.controller.sceneElement.querySelector(".failures");
 
     setTimeout(this.testRunner(0), 0);
 };
-FirstAssistant.prototype.testsComplete = function() {
+TestRunnerAssistant.prototype.testsComplete = function() {
     this.infoEl.innerHTML = $L("Tests complete");
-
-    // TODO : Do this through the app menu or some other UI option
-    this.controller.stageController.pushScene("custom-widget");
 };
 
-FirstAssistant.prototype.testRunner = function(next) {
+TestRunnerAssistant.prototype.testRunner = function(next) {
     var self = this;
     return function() {
         if (self.tests[next]) {
@@ -32,7 +29,7 @@ FirstAssistant.prototype.testRunner = function(next) {
     };
 };
 
-FirstAssistant.prototype.failure = function(message) {
+TestRunnerAssistant.prototype.failure = function(message) {
     var li = this.controller.document.createElement("li");
     li.innerHTML = message;
     this.failureLog.appendChild(li);

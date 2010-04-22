@@ -7,7 +7,7 @@ AppAssistant.prototype.handleLaunch = function(params){
             lightweight: true,
         },
         function(stageController) {
-            stageController.pushScene("first");
+            stageController.pushScene("main");
         },
         Mojo.Controller.StageType.card);
 };

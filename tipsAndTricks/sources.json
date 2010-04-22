@@ -2,19 +2,27 @@
     {"source": "app/assistants/app-assistant.js"},
     {"source": "debug-logging/debug-logging.js"},
     {
-        "scenes": "first",
-        "source": "app/assistants/first-assistant.js"
+        "scenes": "main",
+        "source": "app/assistants/main-assistant.js"
+    },
+
+    {
+        "scenes": "test-runner",
+        "source": "app/assistants/test-runner-assistant.js"
     },
     {
         "scenes": "active",
         "source": "app/assistants/active-assistant.js"
     },
+
     {
         "scenes": "custom-widget",
         "source": "app/assistants/custom-widget-assistant.js"
     },
-
-    {"source": "custom-widget/widget-submit-text.js"},
+    {
+        "scenes": "custom-widget",
+        "source": "custom-widget/widget-submit-text.js"
+    },
 
     {"source": "operation-queue/operation-queue.js"},
     {"source": "operation-queue/operation-queue-test.js"},
