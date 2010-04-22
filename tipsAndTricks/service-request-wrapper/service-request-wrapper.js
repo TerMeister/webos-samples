@@ -43,8 +43,6 @@ var ServiceRequestWrapper;
         bindOptions: function(url, optionsIn, requestId) {
             var options = Object.clone(optionsIn);
             options.onComplete = completeHandler(optionsIn, requestId);
-            Mojo.Log.info("request: %o", options);
-            Mojo.Log.info("request: %j", options);
             return options;
         }
     };
