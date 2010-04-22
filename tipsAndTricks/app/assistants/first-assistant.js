@@ -2,6 +2,7 @@ function FirstAssistant() {
     this.tests = [
         new OperationQueueTest(),
         new ObserverManagerTest(),
+        new CacheManagerTest(),
         new ServiceRequestWrapperTest(),
     ];
 }
