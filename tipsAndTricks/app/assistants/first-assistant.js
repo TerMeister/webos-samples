@@ -48,10 +48,15 @@ FirstAssistant.prototype.failure = function(message) {
 
 function execChain(assistant, cont, chain, next) {
     return function() {
-        if (chain[next]) {
-            chain[next](assistant, execChain(assistant, cont, chain, next+1));
-        } else {
-            cont();
+        try {
+            if (chain[next]) {
+                Mojo.Log.info("Exec: %s", next);
+                chain[next](assistant, execChain(assistant, cont, chain, next+1));
+            } else {
+                cont();
+            }
+        } catch (err) {
+            DebugLogging.logError(err, "execChain: " + next + ":");
         }
     };
 };
