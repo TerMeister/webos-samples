@@ -26,18 +26,18 @@ OperationQueueTest.prototype.successTest = function(assistant) {
         responses.push(1);
     });
     queue.queue({
-        onsuccess: function(result) {
+        onSuccess: function(result) {
             if (result !== "Success") {
                 assistant.failure("Unexpected result: " + result);
             }
             responses.push(2);
         },
-        onfailure: function(result) {
+        onFailure: function(result) {
             assistant.failure("Failure handler called");
         }
     });
     queue.queue({
-        onfailure: function(result) {
+        onFailure: function(result) {
             assistant.failure("Solo Failure handler called");
         }
     });
@@ -83,13 +83,13 @@ OperationQueueTest.prototype.postSuccessTest = function(assistant) {
     }
 
     queue.queue({
-        onsuccess: function(result) {
+        onSuccess: function(result) {
             if (result !== undefined) {
                 assistant.failure("Unexpected result: " + result);
             }
             responses.push(2);
         },
-        onfailure: function(result) {
+        onFailure: function(result) {
             assistant.failure("Failure handler called");
         }
     });
@@ -98,7 +98,7 @@ OperationQueueTest.prototype.postSuccessTest = function(assistant) {
     }
 
     queue.queue({
-        onfailure: function(result) {
+        onFailure: function(result) {
             assistant.failure("Solo Failure handler called");
         }
     });
@@ -124,18 +124,18 @@ OperationQueueTest.prototype.resetSuccessTest = function(assistant) {
         responses.push(1);
     });
     queue.queue({
-        onsuccess: function(result) {
+        onSuccess: function(result) {
             if (result !== "Success") {
                 assistant.failure("Unexpected result: " + result);
             }
             responses.push(2);
         },
-        onfailure: function(result) {
+        onFailure: function(result) {
             assistant.failure("Failure handler called");
         }
     });
     queue.queue({
-        onfailure: function(result) {
+        onFailure: function(result) {
             assistant.failure("Solo Failure handler called");
         }
     });
@@ -162,10 +162,10 @@ OperationQueueTest.prototype.failureTest = function(assistant) {
         assistant.failure("Function success callback called");
     });
     queue.queue({
-        onsuccess: function(result) {
+        onSuccess: function(result) {
             assistant.failure("Successhandler called");
         },
-        onfailure: function(result) {
+        onFailure: function(result) {
             if (result !== "Failure") {
                 assistant.failure("Unexpected result: " + result);
             }
@@ -173,7 +173,7 @@ OperationQueueTest.prototype.failureTest = function(assistant) {
         }
     });
     queue.queue({
-        onfailure: function(result) {
+        onFailure: function(result) {
             if (result !== "Failure") {
                 assistant.failure("Unexpected result: " + result);
             }
@@ -216,10 +216,10 @@ OperationQueueTest.prototype.postFailureTest = function(assistant) {
     });
 
     queue.queue({
-        onsuccess: function(result) {
+        onSuccess: function(result) {
             assistant.failure("Success handler called");
         },
-        onfailure: function(result) {
+        onFailure: function(result) {
             if (result !== undefined) {
                 assistant.failure("Unexpected result: " + result);
             }
@@ -231,7 +231,7 @@ OperationQueueTest.prototype.postFailureTest = function(assistant) {
     }
 
     queue.queue({
-        onfailure: function(result) {
+        onFailure: function(result) {
             if (result !== undefined) {
                 assistant.failure("Unexpected result: " + result);
             }
@@ -257,10 +257,10 @@ OperationQueueTest.prototype.resetFailureTest = function(assistant) {
         assistant.failure("Function success callback called");
     });
     queue.queue({
-        onsuccess: function(result) {
+        onSuccess: function(result) {
             assistant.failure("Successhandler called");
         },
-        onfailure: function(result) {
+        onFailure: function(result) {
             if (result !== "Failure") {
                 assistant.failure("Unexpected result: " + result);
             }
@@ -268,7 +268,7 @@ OperationQueueTest.prototype.resetFailureTest = function(assistant) {
         }
     });
     queue.queue({
-        onfailure: function(result) {
+        onFailure: function(result) {
             if (result !== "Failure") {
                 assistant.failure("Unexpected result: " + result);
             }

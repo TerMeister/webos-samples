@@ -65,9 +65,9 @@ OperationQueue.prototype = {
     },
     _getCallbackFn: function(callback) {
         if (this.complete === "success") {
-            return typeof callback === "function" ? callback : callback.onsuccess;
+            return typeof callback === "function" ? callback : callback.onSuccess;
         } else if (this.complete === "failure") {
-            return callback.onfailure;
+            return callback.onFailure;
         }
     },
     _execCallback: function(callbackFn, result) {
