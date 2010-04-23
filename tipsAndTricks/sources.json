@@ -24,6 +24,11 @@
         "source": "custom-widget/widget-submit-text.js"
     },
 
+    {
+        "scenes": "periodic",
+        "source": "app/assistants/periodic-assistant.js"
+    },
+
     {"source": "operation-queue/operation-queue.js"},
     {"source": "operation-queue/operation-queue-test.js"},
 
@@ -35,5 +40,8 @@
     {"source": "cache-manager/cache-manager-test.js"},
 
     {"source": "service-request-wrapper/service-request-wrapper.js"},
-    {"source": "service-request-wrapper/service-request-wrapper-test.js"}
+    {"source": "service-request-wrapper/service-request-wrapper-test.js"},
+
+    {"source": "periodic-service/periodic-service.js"},
+    {"source": "periodic-service/example-service.js"}
 ]
