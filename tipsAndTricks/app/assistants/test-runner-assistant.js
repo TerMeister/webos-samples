@@ -46,10 +46,18 @@ TestRunnerAssistant.prototype.failure = function(message) {
 function execChain(assistant, cont, chain, next) {
     return function() {
         try {
-            if (chain[next]) {
+            if (chain.length > next) {
+                if (chain[next]._execChain_run) {
+                    assistant.failure("Multiple execution of chain[" + next + "]");
+                }
+                chain[next]._execChain_run = true;
                 Mojo.Log.info("Exec: %s", next);
                 chain[next](assistant, execChain(assistant, cont, chain, next+1));
             } else {
+                if (cont._execChain_run) {
+                    assistant.failure("Multiple execution of cont");
+                }
+                cont._execChain_run = true;
                 cont();
             }
         } catch (err) {
