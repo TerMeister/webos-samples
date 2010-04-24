@@ -1,9 +1,11 @@
-/* See LICENSE */
+/* Copyright 2010 Palm, Inc. All rights reserved. */
 /**
  * A simple widget that combines a textbox and drawer containing submit and cancel buttons.
  * 
  * This must be in the Mojo.Widget package and elements that wish to use this widget must use
  * the name "SubmitText" for their x-mojo-element attribute.
+ * 
+ * See custom-widget/README for more info
  */
 Mojo.Widget.SubmitText = Class.create({
     initialize: function() {

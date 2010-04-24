@@ -1,0 +1,16 @@
+custom-widget:
+Example of a custom widget implementation.
+
+Files:
+ - custom-widget/widget-submit-text.js
+         Widget assistant implementation
+ _ app/views/submit-text/submit-text.html
+         Custom widget template
+ - app/assistant/custom-widget-assistant.js
+         Usage example scene assistant
+ - app/views/custom-widget/custom-widget-scene.html
+         Usage example scene view
+
+History:
+ - 4/24/2010
+      Version 1.0
