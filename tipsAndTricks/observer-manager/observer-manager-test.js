@@ -1,3 +1,5 @@
+/* Copyright 2010 Palm, Inc. All rights reserved. */
+/* ObserverManager testcases. See observer-manager/README */
 function ObserverManagerTest() {}
 
 ObserverManagerTest.prototype.exec = function(assistant, cont) {

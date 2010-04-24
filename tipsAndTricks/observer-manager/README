@@ -1,0 +1,23 @@
+ObserverManager:
+Observable notification manager which links the notifications to the scene and
+stage state.
+
+This class allows for:
+- Deferred notifications when scene or stage is inactive.
+- Simple [Observer, Observable] cleanup on scene cleanup.
+
+Install:
+- Move observer.js, observer-manager.js into application source tree.
+- Include observer.js, observer-manager.js via sources.json
+
+Usage:
+- Instantiate an ObserverManager object within a scene's setup method.
+- Register notification [Observer, Observable] pairs
+- Cleanup ObserverManager instance in scene's cleanup method.
+
+Related Files:
+- observer-manager-test.js : Automated test of this component.
+
+History:
+ - 4/24/2010
+      Version 1.0

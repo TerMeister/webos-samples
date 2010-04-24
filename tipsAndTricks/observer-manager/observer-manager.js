@@ -1,4 +1,4 @@
-/* See LICENSE */
+/* Copyright 2010 Palm, Inc. All rights reserved. */
 
 /**
  * Helper class that allows monitoring of observable objects, providing the option to defer any actions
