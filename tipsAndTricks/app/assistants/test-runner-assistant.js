@@ -1,3 +1,5 @@
+/* Copyright 2010 Palm, Inc. All rights reserved. */
+/* Test Runner Assistant and Runner */
 function TestRunnerAssistant() {
     this.tests = [
         new OperationQueueTest(),

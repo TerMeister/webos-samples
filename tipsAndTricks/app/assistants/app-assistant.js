@@ -1,4 +1,4 @@
-/* Copyright 2009 Palm, Inc.  All rights reserved. */
+/* Copyright 2010 Palm, Inc. All rights reserved. */
 function AppAssistant() {}
 
 AppAssistant.prototype.handleLaunch = function(params){

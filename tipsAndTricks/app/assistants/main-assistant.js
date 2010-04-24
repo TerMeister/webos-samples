@@ -1,3 +1,4 @@
+/* Copyright 2010 Palm, Inc. All rights reserved. */
 function MainAssistant() {
     this.testRunnerHandler = this.testRunner.bind(this);
     this.customWidgetHandler = this.customWidget.bind(this);
