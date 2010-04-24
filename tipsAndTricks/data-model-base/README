@@ -1,0 +1,23 @@
+DataModelBase:
+Common data source library for paging and caching.
+
+Install:
+- Move data-model-base.js into application source tree.
+- Include data-model-base.js via sources.json
+
+Usage:
+- Subclass DataModelBase using Class.create, implementing getCacheName and loadRange.
+    See paged-list/example-model.js
+
+Dependencies:
+- operation-queue
+- cache-manager
+
+Related Files:
+- data-model-base/data-model-base-test.js : Automated test of this component.
+- paged-list/example-service.js : Example implementation class.
+
+History:
+ - 4/24/2010
+      Version 1.0
+      
