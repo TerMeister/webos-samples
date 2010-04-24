@@ -4,6 +4,7 @@ function TestRunnerAssistant() {
         new ObserverManagerTest(),
         new CacheManagerTest(),
         new ServiceRequestWrapperTest(),
+        new DataModelBaseTest(),
     ];
 }
 

@@ -42,6 +42,9 @@
     {"source": "service-request-wrapper/service-request-wrapper.js"},
     {"source": "service-request-wrapper/service-request-wrapper-test.js"},
 
+    {"source": "data-model-base/data-model-base.js"},
+    {"source": "data-model-base/data-model-base-test.js"},
+
     {"source": "periodic-service/periodic-service.js"},
     {"source": "periodic-service/example-service.js"}
 ]
