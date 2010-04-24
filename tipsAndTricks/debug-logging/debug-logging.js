@@ -60,8 +60,9 @@ var DebugLogging;
          *        of the wrapped method.
          * @param postLogItems Array of strings to be evaled and logged after execution
          *        of the wrapped method.
+         * @param wrapArgs Truthy to wrap any arguments typeof function in a logger method.
          */
-        wrapInLogger: function(name, logItems, postLogItems) {
+        wrapInLogger: function(name, logItems, postLogItems, wrapArgs) {
             logItems = logItems || [];
             postLogItems = postLogItems || [];
 
@@ -72,6 +73,13 @@ var DebugLogging;
                 }
                 for (var i = 0; i < logItems.length; i++) {
                     Mojo.Log.info("|    logItem %s: %o", logItems[i], eval(logItems[i]));
+                }
+                var len = wrapArgs && arguments.length;
+                while (len--) {
+                    if (typeof arguments[len] == "function") {
+                        // Begin foot gun
+                        DebugLogging.wrapInLogger.call(arguments, "this[" + len + "]");
+                    }
                 }
 
                 try {
