@@ -1,4 +1,4 @@
-/* See License */
+/* Copyright 2010 Palm, Inc. All rights reserved. */
 /**
  * Queue class which implements a blocking queue on a given operation.
  */

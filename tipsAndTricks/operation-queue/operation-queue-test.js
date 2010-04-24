@@ -1,3 +1,5 @@
+/* Copyright 2010 Palm, Inc. All rights reserved. */
+/* OperationQueue testcases. See operation-queue/README */
 function OperationQueueTest() {}
 
 OperationQueueTest.prototype.exec = function(assistant,  cont) {

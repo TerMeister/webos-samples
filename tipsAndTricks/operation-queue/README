@@ -1,0 +1,16 @@
+OperationQueue:
+Implements a queue which allows one async call to block a series of other calls.
+
+Install:
+- Move operation-queue.js into application source tree.
+- Include operation-queue.js via sources.json
+
+Usage:
+- See OperationQueue instance methods.
+
+Related Files:
+- operation-queue-test.js : Automated test of this component.
+
+History:
+ - 4/24/2010
+      Version 1.0
