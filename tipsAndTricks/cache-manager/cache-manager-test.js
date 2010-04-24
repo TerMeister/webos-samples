@@ -1,3 +1,5 @@
+/* Copyright 2010 Palm, Inc. All rights reserved. */
+/* CacheManager testcases. See cache-manager/README */
 function CacheManagerTest() {}
 
 CacheManagerTest.prototype.exec = function(assistant, cont) {

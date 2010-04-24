@@ -1,0 +1,17 @@
+CacheManager:
+Utility class used to implement caching using the Mojo.Depot API.
+
+Install:
+- Move cache-manager.js into application source tree.
+- Include cache-manager.js via sources.json
+
+Usage:
+- See CacheManager instance methods.
+
+Related Files:
+- cache-manager.js : Implementation
+- cache-manager-test.js : Automated test of this component.
+
+History:
+ - 4/24/2010
+      Version 1.0
