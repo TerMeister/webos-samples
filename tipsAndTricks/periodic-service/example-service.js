@@ -28,5 +28,7 @@ var ServiceExample;
         }
     });
 
+    // Note that we are instantiating this here to ensure that it is registered
+    // prior to any of the PeriodicService static method calls.
     ServiceExample = new ServiceExampleClass();
 })();

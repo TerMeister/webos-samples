@@ -1,0 +1,25 @@
+PeriodicService:
+A base class for implementing efficient periodic tasks.
+
+Install:
+- Move periodic-service.js into application source tree.
+- Include periodic-service.js via sources.json
+
+Usage:
+- Call PeriodicService.startAll in app initialization logic (Optional)
+- Call PeriodicService.handleLaunch in app assistant handeLaunch method (If using outlivesApp mode)
+  Ex:
+    params = PeriodicService.handleLaunch(params);
+    if (params === undefined) {   // Note that this must be === undefined...
+        return;
+    }
+- Create subclasses of PeriodicService, implementing the run method. See example-service.js
+
+Related Files:
+- periodic-service/example-service-test.js : Example service
+- app/assistants/periodic-assistant.js : Example demonstration scene assistant
+- app/views/periodic/periodic-scene : Example demonstration scene view
+
+History:
+ - 4/24/2010
+      Version 1.0
