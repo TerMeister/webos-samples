@@ -1,0 +1,21 @@
+ServiceRequestWrapper:
+A simple class that provides common service Mojo.Service.Request lifetime management logic,
+primarily this prevents garbage collection of request objects and their associated callbacks.
+
+Install:
+- Move service-request-wrapper.js into application directory.
+- Include service-request-wrapper.js via sources.json
+
+Usage:
+- Call ServiceRequestWrapper.request in place of all new Mojo.Service.Request calls.
+
+Note that this wrapper will cleanup non-subscription requests. If a requests is made
+as a subscription, the caller must explicitly call the cancel object for the given
+request or the request object will remain in the heap until the application closes.
+
+Related Files:
+- service-request-wrapper-test.js : Automated test of this component.
+
+History:
+ - 4/24/2010
+      Version 1.0
