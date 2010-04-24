@@ -1,0 +1,41 @@
+debug-logging:
+Utility methods for dynamic logging within the application and framework.
+
+WARNING: These methods are not intended for use within production builds.
+
+The DebugLogging class contains utilites that allow for injection of logging and
+error handling logic on any method that is addressable from the global scope.
+
+Install:
+- Move debug-logging.js into application source tree.
+- Include debug-logging.js via sources.json
+
+Examples:
+These examples are dependent on undocumented internal framework code.
+As such they may not work between different versions of the framework.
+
+List Widget Lifetimes:
+DebugLogging.wrapInLogger("Mojo.Widget.List.prototype.updateListItems");
+DebugLogging.wrapInLogger("Mojo.Widget.List.prototype.noticeAddedItems");
+DebugLogging.wrapInLogger("Mojo.Widget.List.prototype.noticeUpdatedItems");
+DebugLogging.wrapInLogger("Mojo.Widget.List.prototype.noticeRemovedItems");
+
+Scene Management:
+DebugLogging.wrapInLogger("Mojo.Controller.StageController.prototype.pushScene");
+DebugLogging.wrapInLogger("Mojo.Controller.StageController.prototype.popScenesTo");
+DebugLogging.wrapInLogger("Mojo.Controller.StageController.prototype.swapScene");
+
+Logging Data States:
+DebugLogging.wrapInLogger("Mojo.Model.BigArray.prototype._updateWindow",
+        [
+             "this.length", "this._windowSize", "this._items.length",
+             "this._windowOffset", "this._preferredWindowOffset"
+        ],
+        ["this._windowOffset", "this._preferredWindowOffset"]);
+
+Logging members instantiated within the constructor:
+DebugLogging.wrapInErrorHandler("Mojo.Controller.SceneController", [ "assistantSetup", "assistantCleanup" ]);
+
+History:
+ - 4/24/2010
+      Version 1.0
