@@ -1,0 +1,23 @@
+PagedList:
+Widget providing a continuously paging list view for the DataModelBase model.
+
+Install:
+- Move paged-list.html into app/views/paged-list/ in source tree.
+- Move widget-paged-list.js into application source tree.
+- Include widget-paged-list.js via sources.json
+
+Usage:
+- Create a div with the PagedList widget ID. See app/views/example-list/example-list-scene.html
+- Create an item template. See app/views/example-list/item-template.html
+- Instantate the widget using setupWidget, passing a DataModelBase implementation for the model.
+    See app/assistants/example-list-assistant.js
+
+Related Files:
+- paged-list/example-model.js : Example data model
+- app/assistants/example-list-assistant.js : Example demonstration scene assistant
+- app/views/example-list/example-list-scene.html : Example demonstration scene view
+- app/views/example-list/item-template.html : Example demonstration item template
+
+History:
+ - 4/24/2010
+      Version 1.0
