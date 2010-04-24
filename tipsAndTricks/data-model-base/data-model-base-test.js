@@ -1,3 +1,5 @@
+/* Copyright 2010 Palm, Inc. All rights reserved. */
+/* DataModelBase testcases. See data-model-base/README */
 function DataModelBaseTest() {}
 
 DataModelBaseTest.prototype.exec = function(assistant, cont) {

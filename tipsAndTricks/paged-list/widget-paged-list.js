@@ -1,4 +1,5 @@
-/* See LICENSE */
+/* Copyright 2010 Palm, Inc. All rights reserved. */
+
 /**
  * Widget implementing a list UI for DataModelBase implementations.
  * 

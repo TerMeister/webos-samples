@@ -1,4 +1,5 @@
-/* See LICENSE */
+/* Copyright 2010 Palm, Inc. All rights reserved. */
+
 /**
  * Debugging Hacks that work around holes in the current exception logging stack.
  * 

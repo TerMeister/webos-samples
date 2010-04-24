@@ -1,3 +1,5 @@
+/* Copyright 2010 Palm, Inc. All rights reserved. */
+/* Assistant demonstrating PagedList widget. See paged-list/README */
 function ExampleListAssistant() {
     this.dataModel = new ExampleModel(101);
     Mojo.Log.info("Example List Init");

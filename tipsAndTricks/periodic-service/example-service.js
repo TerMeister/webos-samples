@@ -1,3 +1,5 @@
+/* Copyright 2010 Palm, Inc. All rights reserved. */
+/* PeriodicService example implementation. See periodic-service/README */
 var ServiceExample;
 
 (function() {

@@ -1,3 +1,5 @@
+/* Copyright 2010 Palm, Inc. All rights reserved. */
+/* Assistant demonstrating PeriodicService. See periodic-service/README */
 function PeriodicAssistant() {
     this.updateServiceHandler = this.updateService.bind(this);
 

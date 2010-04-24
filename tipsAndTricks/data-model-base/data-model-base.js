@@ -1,4 +1,5 @@
-/* See LICENSE */
+/* Copyright 2010 Palm, Inc. All rights reserved. */
+
 /**
  * Provides a paging and caching implementation for data models who pull from remote data sources.
  */

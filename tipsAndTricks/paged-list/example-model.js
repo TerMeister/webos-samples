@@ -1,3 +1,5 @@
+/* Copyright 2010 Palm, Inc. All rights reserved. */
+/* DataModelBase example implementation. See data-model-base/README and paged-list/README */
 var ExampleModel = Class.create(DataModelBase, {
     initialize: function($super, upper, options) {
         $super(options);
