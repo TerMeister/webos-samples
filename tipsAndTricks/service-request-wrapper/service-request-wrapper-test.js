@@ -1,3 +1,5 @@
+/* Copyright 2010 Palm, Inc. All rights reserved. */
+/* ServiceRequestWrapper. See service-request-wrapper/README */
 function ServiceRequestWrapperTest() {}
 
 ServiceRequestWrapperTest.prototype.exec = function(assistant, cont) {

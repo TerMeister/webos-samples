@@ -3,7 +3,7 @@ A simple class that provides common service Mojo.Service.Request lifetime manage
 primarily this prevents garbage collection of request objects and their associated callbacks.
 
 Install:
-- Move service-request-wrapper.js into application directory.
+- Move service-request-wrapper.js into application source tree.
 - Include service-request-wrapper.js via sources.json
 
 Usage:
