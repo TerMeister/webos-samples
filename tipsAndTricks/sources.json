@@ -28,6 +28,18 @@
         "scenes": "periodic",
         "source": "app/assistants/periodic-assistant.js"
     },
+    {
+        "scenes": "example-list",
+        "source": "app/assistants/example-list-assistant.js"
+    },
+    {
+        "scenes": "example-list",
+        "source": "paged-list/widget-paged-list.js"
+    },
+    {
+        "scenes": "example-list",
+        "source": "paged-list/example-model.js"
+    },
 
     {"source": "operation-queue/operation-queue.js"},
     {"source": "operation-queue/operation-queue-test.js"},
